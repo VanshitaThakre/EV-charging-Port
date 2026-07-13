@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stations</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>⚡ {{city}} Charging Stations</h2>
+
+<p>📍 Your Location: {{location}}</p>
+
+{% for s in stations %}
+
+<div class="box">
+
+<h3>{{s.name}}</h3>
+<p>📏 Distance: {{s.distance}}</p>
+<p>👥 Crowd: {{s.crowd}}</p>
+
+<a href="/book/{{s.name}}">
+    <button>Select</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>
