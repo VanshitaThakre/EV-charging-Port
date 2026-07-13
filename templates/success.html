@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Success</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>🎉 Booking Confirmed</h2>
+
+<p>Name: {{name}}</p>
+<p>Vehicle: {{vehicle}}</p>
+<p>City: {{city}}</p>
+<p>Station: {{station}}</p>
+
+<h3>🔐 Token</h3>
+<p>{{token}}</p>
+
+<h3>📷 QR Code</h3>
+<img src="{{ url_for('static', filename=qr_image) }}" width="200">
+
+</div>
+
+</body>
+</html>
